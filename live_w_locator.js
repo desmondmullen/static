@@ -100,8 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
         Quagga.stop();
         if (App.lastResult !== code) {
             App.lastResult = code;
+            $("#query").val(code);
+            $("#container").css('display', 'none');
             // document.getElementById("query").value = code;
-            document.getElementById("container").css('display', 'none');
+            // document.getElementById("container").css('display', 'none');
         }
     });
 }, false);
