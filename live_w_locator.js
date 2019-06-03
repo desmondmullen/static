@@ -1,4 +1,4 @@
-$(function () {
+$(document).ready(function () {
     var App = {
         init: function () {
             var self = this;
@@ -27,14 +27,14 @@ $(function () {
             var self = this;
 
             self.initCameraSelection();
-            $(".controls").on("click", "button.stop", function (e) {
-                e.preventDefault();
-                Quagga.stop();
-            });
+            // $(".controls").on("click", "button.stop", function (e) {
+            //     e.preventDefault();
+            //     Quagga.stop();
+            // });
         },
         detachListeners: function () {
-            $(".controls").off("click", "button.stop");
-            $(".controls .reader-config-group").off("change", "input, select");
+            // $(".controls").off("click", "button.stop");
+            // $(".controls .reader-config-group").off("change", "input, select");
         },
         setState: function (path, value) {
             var self = this;
@@ -143,8 +143,8 @@ $(function () {
         Quagga.stop();
         if (App.lastResult !== code) {
             App.lastResult = code;
-            $("#query").val(code);
-            $("#container").css('display', 'none');
+            document.getElementById("query").value(code);
+            document.getElementById("container").css('display', 'none');
         }
     });
 
