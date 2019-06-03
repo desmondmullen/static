@@ -11,6 +11,12 @@ setTimeout(function () {
                 Quagga.start();
             });
         },
+        stopIfNotDisplaying: function () {
+            if (document.getElementById('container').style.display = 'none') {
+                Quagga.stop();
+                console.log("stopped");
+            }
+        },
         handleError: function (err) {
             console.log(err);
         },
@@ -99,6 +105,9 @@ setTimeout(function () {
     });
 
     App.init();
+    setTimeout(function () {
+        App.stopIfNotDisplaying();
+    }, 250);
 
     Quagga.onDetected(function (result) {
         var code = result.codeResult.code;
