@@ -1,4 +1,5 @@
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
+setTimeout(function () {
     var App = {
         init: function () {
             var self = this;
@@ -92,11 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
         lastResult: null
     };
 
-    document.getElementById("scan").addEventListener("click", function () {
-        App.init();
-        $("#container").css('display', 'block');
-    });
-
     document.getElementById("cancel").addEventListener("click", function () {
         Quagga.stop();
         $("#container").css('display', 'none');
@@ -114,4 +110,5 @@ document.addEventListener('DOMContentLoaded', function () {
             $("#container").css('display', 'none');
         }
     });
-}, false);
+    // }, false);
+}, 250);
