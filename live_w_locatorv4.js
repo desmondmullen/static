@@ -92,16 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
         lastResult: null
     };
 
-    document.getElementById("scan").addEventListener("click", function () {
-        App.init();
-        $("#container").css('display', 'block');
-    });
-
-    document.getElementById("cancel").addEventListener("click", function () {
-        Quagga.stop();
-        $("#container").css('display', 'none');
-    });
-
     App.init();
 
     Quagga.onDetected(function (result) {
@@ -110,6 +100,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (App.lastResult !== code) {
             App.lastResult = code;
             $("#query").val(code);
+            document.getElementById("query").addEventListener("barcode", function () {
+                alert("Hello World");
+            });
+            // var event = new Event('click');
             $("#query").trigger("click");
             $("#container").css('display', 'none');
         }
