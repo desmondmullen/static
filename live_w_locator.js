@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function () {
         Quagga.stop();
         if (App.lastResult !== code) {
             App.lastResult = code;
-            document.getElementById("query").value = code;
+            // document.getElementById("query").value = code;
             document.getElementById("container").css('display', 'none');
         }
     });
