@@ -105,9 +105,6 @@ setTimeout(function () {
     });
 
     App.init();
-    setTimeout(function () {
-        App.stopIfNotDisplaying();
-    }, 250);
 
     Quagga.onDetected(function (result) {
         var code = result.codeResult.code;
