@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener('DOMContentLoaded', function () {
     var App = {
         init: function () {
             var self = this;
@@ -17,16 +17,7 @@ $(document).ready(function () {
             var streamLabel = Quagga.CameraAccess.getActiveStreamLabel();
 
             return Quagga.CameraAccess.enumerateVideoDevices()
-            // .then(function (devices) {
-            //     function pruneText (text) {
-            //         return text.length > 30 ? text.substr(0, 30) : text;
-            //     }
-            // });
         },
-        // attachListeners: function () {
-        //     var self = this;
-        //     self.initCameraSelection();
-        // },
         setState: function (path, value) {
             var self = this;
             if (path.startsWith('settings.')) {
@@ -112,5 +103,4 @@ $(document).ready(function () {
             document.getElementById("container").css('display', 'none');
         }
     });
-
-});
+}, false);
