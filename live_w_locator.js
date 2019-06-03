@@ -92,6 +92,9 @@ setTimeout(function () {
                 readers: [ {
                     format: "upc_reader",
                     config: {}
+                }, {
+                    format: "ean_8_reader",
+                    config: {}
                 } ]
             },
             locate: true
