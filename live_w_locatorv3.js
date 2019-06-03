@@ -96,13 +96,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     Quagga.onDetected(function (result) {
         var code = result.codeResult.code;
+        console.log(code);
         Quagga.stop();
         if (App.lastResult !== code) {
             App.lastResult = code;
             $("#query").val(code);
-            var event = new Event('change');
-            $("#query").dispatchEvent(event);
             $("#container").css('display', 'none');
+            // document.getElementById("query").value = code;
+            // document.getElementById("container").css('display', 'none');
         }
     });
 }, false);
