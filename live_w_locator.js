@@ -100,8 +100,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (App.lastResult !== code) {
             App.lastResult = code;
             $("#query").val(code);
-            var event = new Event('change');
-            $("#query").dispatchEvent(event);
+            document.getElementById("query").addEventListener("barcode", function () {
+                alert("Hello World");
+            });
+            // var event = new Event('click');
+            $("#query").trigger("click");
             $("#container").css('display', 'none');
         }
     });
