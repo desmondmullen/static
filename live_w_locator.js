@@ -115,7 +115,8 @@ setTimeout(function () {
         if (App.lastResult !== code) {
             App.lastResult = code;
             $("#query").val(code);
-            $("#query").trigger("click");
+            // $("#query").trigger("click");
+            $("#btn-search").trigger("click");
             $("#container").css('display', 'none');
         }
     });
